@@ -1,0 +1,12 @@
+﻿services:
+  - type: web
+    name: poptags
+    runtime: node
+    plan: free
+    buildCommand: npm run postinstall && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PORT
+        value: 10000
